@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ning-hui.github.io/link/index.html</loc>
+    <loc>https://ning-hui.github.io/about/index.html</loc>
     
-    <lastmod>2020-04-05T06:53:01.144Z</lastmod>
+    <lastmod>2020-04-05T07:06:33.230Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://ning-hui.github.io/categories/index.html</loc>
     
-    <lastmod>2020-04-05T05:47:53.929Z</lastmod>
+    <lastmod>2020-04-05T07:02:44.495Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://ning-hui.github.io/tags/index.html</loc>
     
-    <lastmod>2020-04-05T05:46:29.287Z</lastmod>
+    <lastmod>2020-04-05T07:02:37.095Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ning-hui.github.io/link/index.html</loc>
+    
+    <lastmod>2020-04-05T06:53:01.144Z</lastmod>
     
   </url>
   
