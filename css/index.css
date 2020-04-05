@@ -2977,7 +2977,7 @@ figure.gallery-group .gallery-group-name:after {
 .note h4,
 .note h5,
 .note h6 {
-  margin-top: 3px;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 0 !important;
   border-bottom: initial;
@@ -3000,16 +3000,6 @@ figure.gallery-group .gallery-group-name:after {
 .note img:last-child {
   margin-bottom: 0 !important;
 }
-.note:not(.no-icon) {
-  padding-left: 45px;
-}
-.note:not(.no-icon)::before {
-  position: absolute;
-  top: 13px;
-  left: 15px;
-  font-size: larger;
-  font-family: 'FontAwesome';
-}
 .note.default {
   border-left-color: #777;
 }
@@ -3018,10 +3008,6 @@ figure.gallery-group .gallery-group-name:after {
 .note.default h4,
 .note.default h5,
 .note.default h6 {
-  color: #777;
-}
-.note.default:not(.no-icon)::before {
-  content: '\f0a9';
   color: #777;
 }
 .note.primary {
@@ -3034,10 +3020,6 @@ figure.gallery-group .gallery-group-name:after {
 .note.primary h6 {
   color: #6f42c1;
 }
-.note.primary:not(.no-icon)::before {
-  content: '\f055';
-  color: #6f42c1;
-}
 .note.info {
   border-left-color: #428bca;
 }
@@ -3046,10 +3028,6 @@ figure.gallery-group .gallery-group-name:after {
 .note.info h4,
 .note.info h5,
 .note.info h6 {
-  color: #428bca;
-}
-.note.info:not(.no-icon)::before {
-  content: '\f05a';
   color: #428bca;
 }
 .note.success {
@@ -3062,10 +3040,6 @@ figure.gallery-group .gallery-group-name:after {
 .note.success h6 {
   color: #5cb85c;
 }
-.note.success:not(.no-icon)::before {
-  content: '\f058';
-  color: #5cb85c;
-}
 .note.warning {
   border-left-color: #f0ad4e;
 }
@@ -3076,10 +3050,6 @@ figure.gallery-group .gallery-group-name:after {
 .note.warning h6 {
   color: #f0ad4e;
 }
-.note.warning:not(.no-icon)::before {
-  content: '\f06a';
-  color: #f0ad4e;
-}
 .note.danger {
   border-left-color: #d9534f;
 }
@@ -3088,10 +3058,6 @@ figure.gallery-group .gallery-group-name:after {
 .note.danger h4,
 .note.danger h5,
 .note.danger h6 {
-  color: #d9534f;
-}
-.note.danger:not(.no-icon)::before {
-  content: '\f056';
   color: #d9534f;
 }
 .layout_page {
