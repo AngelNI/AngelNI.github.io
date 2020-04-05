@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="baidu-site-verification" content="vi604da58U"><meta name="google-site-verification" content="JwzmnANXlpmQlhwaSORuqpEB6P3Sr-tRhw4R_XDRcEc"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>陌上花开 | AngelNI's Blog</title><meta name="description" content="陌上花开"><meta name="keywords" content="Life essay"><meta name="author" content="Hui Ning"><meta name="copyright" content="Hui Ning"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/Ning-Hui.github.io/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="陌上花开"><meta name="twitter:description" content="陌上花开"><meta name="twitter:image" content="https://s2.ax1x.com/2019/12/01/QmCDu4.jpg"><meta property="og:type" content="article"><meta property="og:title" content="陌上花开"><meta property="og:url" content="https://ning-hui.github.io/record/"><meta property="og:site_name" content="AngelNI's Blog"><meta property="og:description" content="陌上花开"><meta property="og:image" content="https://s2.ax1x.com/2019/12/01/QmCDu4.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/Ning-Hui.github.io/css/index.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://ning-hui.github.io/record/"><link rel="prev" title="排序算法-2" href="https://ning-hui.github.io/sort-2/"><link rel="next" title="简单前缀和" href="https://ning-hui.github.io/prefix-sum/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/Ning-Hui.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"Press","message_next":"to bookmark this page"},"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/Ning-Hui.github.io/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/Ning-Hui.github.io/archives/"><div class="headline">Articles</div><div class="length_num">134</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/Ning-Hui.github.io/tags/"><div class="headline">Tags</div><div class="length_num">85</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/Ning-Hui.github.io/categories/"><div class="headline">Categories</div><div class="length_num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Ning-Hui.github.io/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/Ning-Hui.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://s2.ax1x.com/2019/12/01/QmCDu4.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/Ning-Hui.github.io/">AngelNI's Blog</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Ning-Hui.github.io/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/Ning-Hui.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">陌上花开</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2019-12-01 19:46:45"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-12-01</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2020-04-05 12:56:23"><i class="fa fa-history" aria-hidden="true"></i> Updated 2020-04-05</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/Ning-Hui.github.io/categories/Life-essay/">Life essay</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>Word count:</span><span class="word-count">943</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>Reading time: 2 min</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>Comments:</span><a href="/Ning-Hui.github.io/record/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/Ning-Hui.github.io/record/" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><p>12月的第一天，也是一年中的最后一个月，不知不觉你又长大一岁。<a id="more"></a></p>
+<p>纤尘陌陌终有花开时,花开一季芬芳至永远。陌上那千年的等候,终究等来了花开一世的最终绚烂。陌上花开已迟暮,但终究在千年的等候里绽放出了美丽。这份美丽,或许于陌上而言,真的是经久的等待。或许,陌上早已有了等不来陌上花开的平和,如若陌上花开,阡陌或许觉得已经是生命的奇迹了。</p>
+<p>纤尘陌陌里,风舞尽沙,在千年的翘首里,阡陌已经忘了什么是风和沙的</p>
+<p>缠绵。在终年的清寂里,阡陌或许看透尘世,舞尽人生,不再对花开有所期待。对于突然在陌上开出的那朵尘世青莲,或许是经久等待之外的惊喜。</p>
+<p>秋风习习里,绝尘于陌上那孤寂的青莲,在不知不觉中已露尖尖角,那花</p>
+<p>蕾在晨露里绽吐芬芳。它已经错过了花开的最好季节,在秋已至的时候,抹开了沉睡已久的眼,终于明白自己为什么沉睡这么久,只因一直在寻找属于自己生命的阡陌。</p>
+<p>或许,属于它生命的阡陌一直在尘世的浮华里,未曾停留。所以千百年来的找寻,终究一次次的和属于它生命的阡陌错过。青莲想它这一生,或许已经找不到属于它生命的那方净土了。于是,沉睡再沉睡,在所有的睡意朦胧里,诠释着自己的前世今生。</p>
+<p>不过,青莲是倔强的,惟有找到它想要的阡陌,才愿意在这世绽放属于它自己的美丽。如若,遇不到给它灵魂洗涤的净土,它将永远的沉睡下去,不再醒来。或许,这份倔强终究有一天会感动苍天,让它在醒来的时候遇到了能让它娇艳开放的那方阡陌。</p>
+<p>几经轮回,沉睡之中醒来再沉睡,反复了千年,不怕一直在纤尘里流离,只因找不到让它尘埃落定的芬芳。经久的沉睡,但是记忆的芬芳一直是浓郁的,它明白自己为何一直在沉睡,因为在等待着属于它芬芳的阡陌风尘仆仆而来。</p>
+<p>所有的轮回里,遇到错过,错过再遇,一场场的浩劫最青莲它把自己禁锢</p>
+<p>在了沉睡里。青莲明白自己只是倔强又绝然的,在等着属于它的那一方陌,那一池水。如若能拥有自己想要的阡陌,最后自己的生命会归于一切的平静之中。</p>
+<p>青莲或许已经闻到了那方属于它的阡陌的味道,只是那方阡陌还在遥远的地方苍凉的遥望。青莲明白,总有一天自己等待着的那方陌,那池水,会从滚滚的红尘里最后卸下所有的喧嚣,还一切一片清寂。卸下所有的繁华,卸下所有的琐碎,呈有素颜的那天。</p>
+<p>青莲明白自己这样倔强的沉睡,为的就是找寻属于自己生命的那方阡陌。它最终需要的是不醉红尘只醉君的那份酣畅淋漓,或许此生也找不到这样的酣畅淋漓。但她自己知道,如若君不来,它就迟迟不开,不管是千年还是万年,永远的沉睡下去。如若君,一世的颠沛流离,那么它就一世的孤芳沉睡。</p>
+<pre><code>——《陌上花开》</code></pre></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Hui Ning</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://ning-hui.github.io/record/">https://ning-hui.github.io/record/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/Ning-Hui.github.io/tags/Life-essay/">Life essay</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/04/04/GwaQfK.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/Ning-Hui.github.io/img/2.png" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/Ning-Hui.github.io/img/1.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/Ning-Hui.github.io/sort-2/"><img class="prev_cover lazyload" data-src="https://s2.ax1x.com/2019/12/07/QNP6XD.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">排序算法-2</div></div></a></div><div class="next-post pull_right"><a href="/Ning-Hui.github.io/prefix-sum/"><img class="next_cover lazyload" data-src="https://s2.ax1x.com/2019/11/30/QVjLlR.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">简单前缀和</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/Ning-Hui.github.io/A-New-Start/" title="A New Start"><img class="relatedPosts_cover lazyload"data-src="https://s2.ax1x.com/2019/08/29/mbtXUP.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-06-20</div><div class="relatedPosts_title">A New Start</div></div></a></div><div class="relatedPosts_item"><a href="/Ning-Hui.github.io/CET4/" title="CET4"><img class="relatedPosts_cover lazyload"data-src="https://s2.ax1x.com/2019/08/29/mbtgBR.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-06-20</div><div class="relatedPosts_title">CET4</div></div></a></div><div class="relatedPosts_item"><a href="/Ning-Hui.github.io/Essay/" title="生活随笔"><img class="relatedPosts_cover lazyload"data-src="https://s2.ax1x.com/2019/08/29/mbUPzD.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-08-29</div><div class="relatedPosts_title">生活随笔</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: false,
+  verify: false,
+  appId: '0dNioPuDCFsscn6y58dczYiy-gzGzoHsz# leancloud application app id',
+  appKey: 'jbyn5TRGmiiAsYjo7PFFzrYJ# leancloud application app key',
+  placeholder: '一起来玩耍鸭！',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'en',
+  recordIP: false,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Hui Ning</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">简</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js" ></script><script src="/Ning-Hui.github.io/js/utils.js" ></script><script src="/Ning-Hui.github.io/js/main.js" ></script><script src="/Ning-Hui.github.io/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/Ning-Hui.github.io/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/Ning-Hui.github.io/js/search/local-search.js"></script></body></html>

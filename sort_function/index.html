@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="baidu-site-verification" content="vi604da58U"><meta name="google-site-verification" content="JwzmnANXlpmQlhwaSORuqpEB6P3Sr-tRhw4R_XDRcEc"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>sort() function | AngelNI's Blog</title><meta name="description" content="sort() function"><meta name="keywords" content="sort"><meta name="author" content="Hui Ning"><meta name="copyright" content="Hui Ning"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/Ning-Hui.github.io/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="sort() function"><meta name="twitter:description" content="sort() function"><meta name="twitter:image" content="https://s2.ax1x.com/2019/08/29/mbtyjJ.jpg"><meta property="og:type" content="article"><meta property="og:title" content="sort() function"><meta property="og:url" content="https://ning-hui.github.io/sort_function/"><meta property="og:site_name" content="AngelNI's Blog"><meta property="og:description" content="sort() function"><meta property="og:image" content="https://s2.ax1x.com/2019/08/29/mbtyjJ.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/Ning-Hui.github.io/css/index.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://ning-hui.github.io/sort_function/"><link rel="prev" title="天生棋局(指针)" href="https://ning-hui.github.io/%E5%A4%A9%E7%94%9F%E6%A3%8B%E5%B1%80-%E6%8C%87%E9%92%88/"><link rel="next" title="DFS" href="https://ning-hui.github.io/DFS/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/Ning-Hui.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"Press","message_next":"to bookmark this page"},"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/Ning-Hui.github.io/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/Ning-Hui.github.io/archives/"><div class="headline">Articles</div><div class="length_num">134</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/Ning-Hui.github.io/tags/"><div class="headline">Tags</div><div class="length_num">85</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/Ning-Hui.github.io/categories/"><div class="headline">Categories</div><div class="length_num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Ning-Hui.github.io/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/Ning-Hui.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#C-中的sort（）函数"><span class="toc-number">1.</span> <span class="toc-text">C++中的sort（）函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sort"><span class="toc-number"></span> <span class="toc-text">sort()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-介绍"><span class="toc-number">1.</span> <span class="toc-text">1.介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-准备"><span class="toc-number">2.</span> <span class="toc-text">2.准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-使用方法"><span class="toc-number">3.</span> <span class="toc-text">3.使用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-sort-类函数"><span class="toc-number">4.</span> <span class="toc-text">4.sort()类函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-sort（）函数练习"><span class="toc-number">5.</span> <span class="toc-text">5.sort（）函数练习</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-有序序列合并"><span class="toc-number">5.0.1.</span> <span class="toc-text">1.有序序列合并</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-最高最低分差"><span class="toc-number">5.0.2.</span> <span class="toc-text">2.最高最低分差</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#"><span class="toc-number"></span> <span class="toc-text"></span></a></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://s2.ax1x.com/2019/08/29/mbtyjJ.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/Ning-Hui.github.io/">AngelNI's Blog</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Ning-Hui.github.io/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/Ning-Hui.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">sort() function</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2019-06-20 19:28:25"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-06-20</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2020-04-05 12:41:47"><i class="fa fa-history" aria-hidden="true"></i> Updated 2020-04-05</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/Ning-Hui.github.io/categories/Algorithm/">Algorithm</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>Word count:</span><span class="word-count">1k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>Reading time: 4 min</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>Comments:</span><a href="/Ning-Hui.github.io/sort_function/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/Ning-Hui.github.io/sort_function/" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h4 id="C-中的sort（）函数"><a href="#C-中的sort（）函数" class="headerlink" title="C++中的sort（）函数"></a>C++中的sort（）函数</h4><p>我在之前的博客中提到，解决排序问题的一个好用的函数就是C++的sort（）函数啦。sort（）函数是C++内置的函数，只需要加入头文件，掌握正确的使用方法，你就可以在排序中驰骋疆场了（自吹自擂<del>）。好啦，下面就请主角登场吧</del></p>
+<a id="more"></a>
+
+<p><img src="/Ning-Hui.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/08/28/mHsJts.jpg"  alt=""></p>
+<h2 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h2><h4 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h4><p>c++语言中 STL 库中的sort函数可以用来对数组进行排序。对于c++语言来说由于其自带的sort()函数更容易被编译器编译，其排序速度比基于快速排序的qsort要快上不少，且用法简单。(百度知道)</p>
+<h4 id="2-准备"><a href="#2-准备" class="headerlink" title="2.准备"></a>2.准备</h4><p>sort（）函数的使用需要添加头文件</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line">或者万能头文件</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-使用方法"><a href="#3-使用方法" class="headerlink" title="3.使用方法"></a>3.使用方法</h4><p><strong>sort（star,end,cmp）*</strong></p>
+<p>sort函数有三个参数：</p>
+<p>1.第一个是要排序的数组的起始地址</p>
+<p>2.第二个是结束地址（最后一位的地址的下一地址）</p>
+<p>3.第三个参数是排序的方法。sort函数默认是按从小到大排序。可以修改cmp实现从大到小排序</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">sort（<span class="built_in">begin</span>，<span class="built_in">end</span>，less&lt;data-type&gt;)——升序</span><br><span class="line"></span><br><span class="line">sort（<span class="built_in">begin</span>，<span class="built_in">end</span>，greater&lt;data-type&gt;)——降序</span><br></pre></td></tr></table></figure>
+
+<p>以上是比较简单常用的对数组的排序方法，sort（）类函数中还有其他的排序功能。</p>
+<h4 id="4-sort-类函数"><a href="#4-sort-类函数" class="headerlink" title="4.sort()类函数"></a>4.sort()类函数</h4><table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">sort</td>
+<td align="center">对给定区间所有元素进行排序</td>
+</tr>
+<tr>
+<td align="center">stable_sort</td>
+<td align="center">对给定区间所有元素进行稳定排序</td>
+</tr>
+<tr>
+<td align="center">partial_sort</td>
+<td align="center">对给定区间所有元素进行稳定排序</td>
+</tr>
+<tr>
+<td align="center">partial_sort</td>
+<td align="center">对给定区间所有元素部分排序</td>
+</tr>
+<tr>
+<td align="center">partial_sort_copy</td>
+<td align="center">对给定区间复制并排序</td>
+</tr>
+<tr>
+<td align="center">nth_element</td>
+<td align="center">找出给定区间的某个位置对应的元素</td>
+</tr>
+<tr>
+<td align="center">is_sorted</td>
+<td align="center">判断一个区间是否已经排好序</td>
+</tr>
+<tr>
+<td align="center">partition</td>
+<td align="center">使得符合某个条件的元素放在前面</td>
+</tr>
+<tr>
+<td align="center">stable_partition</td>
+<td align="center">相对稳定的使得符合某个条件的元素放在前面</td>
+</tr>
+</tbody></table>
+<h4 id="5-sort（）函数练习"><a href="#5-sort（）函数练习" class="headerlink" title="5.sort（）函数练习"></a>5.sort（）函数练习</h4><h6 id="1-有序序列合并"><a href="#1-有序序列合并" class="headerlink" title="1.有序序列合并"></a>1.有序序列合并</h6><p>链接：</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/827/J" target="_blank" rel="noopener">https://ac.nowcoder.com/acm/contest/827/J</a></p>
+<p>来源：牛客网</p>
+<p>题目描述</p>
+<p>输入两个升序排列的序列，将两个序列合并为一个有序序列并输出。</p>
+<p>输入描述:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入包含三行，</span><br><span class="line"></span><br><span class="line">第一行包含两个正整数n, m（1 ≤ n,m ≤ 100），用空格分隔。n表示第二行第一个升序序列中数字的个数，m表示第三行第二个升序序列中数字的个数。</span><br><span class="line"></span><br><span class="line">第二行包含n个整数（范围1~5000），用空格分隔。</span><br><span class="line"></span><br><span class="line">第三行包含m个整数（范围1~5000），用空格分隔。</span><br></pre></td></tr></table></figure>
+
+<p>输出描述:</p>
+<p>输出为一行，输出长度为n+m的升序序列，即长度为n的升序序列和长度为m的升序序列中的元素重新进行升序序列排列合并。</p>
+<p><strong>示例1</strong></p>
+<p>输入<br>5 6<br>1 3 7 9 22<br>2 8 10 17 33 44<br>输出<br>1 2 3 7 8 9 10 17 22 33 44</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,t;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100</span>],b[<span class="number">100</span>],c[<span class="number">200</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    t=n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">        c[i]=a[i];</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;b[i];</span><br><span class="line">        c[t++]=b[i];</span><br><span class="line">    &#125;</span><br><span class="line">    sort(c,c+m+n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m+n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;c[i];</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">    &#125;          </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-最高最低分差"><a href="#2-最高最低分差" class="headerlink" title="2.最高最低分差"></a>2.最高最低分差</h6><p>链接：</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/827/E" target="_blank" rel="noopener">https://ac.nowcoder.com/acm/contest/827/E</a></p>
+<p>来源：牛客网</p>
+<p>题目描述</p>
+<p>输入n个成绩，换行输出n个成绩中最高分数和最低分数的差。</p>
+<p>输入描述:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">两行，第一行为n，表示n个成绩，不会大于10000。</span><br><span class="line"></span><br><span class="line">第二行为n个成绩（整数表示，范围0~100），以空格隔开。</span><br></pre></td></tr></table></figure>
+
+<p>输出描述:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一行，输出n个成绩中最高分数和最低分数的差。</span><br></pre></td></tr></table></figure>
+
+<p>示例1</p>
+<p>输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">10</span><br><span class="line">98 100 99 97 95 99 98 97 96 100</span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<p>5</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,a[<span class="number">10000</span>],sum=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    sort(a,a+n);</span><br><span class="line">    sum=a[n<span class="number">-1</span>]-a[<span class="number">0</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Hui Ning</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://ning-hui.github.io/sort_function/">https://ning-hui.github.io/sort_function/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/Ning-Hui.github.io/tags/sort/">sort</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/04/04/GwaQfK.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/Ning-Hui.github.io/img/2.png" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/Ning-Hui.github.io/img/1.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/Ning-Hui.github.io/%E5%A4%A9%E7%94%9F%E6%A3%8B%E5%B1%80-%E6%8C%87%E9%92%88/"><img class="prev_cover lazyload" data-src="https://s2.ax1x.com/2019/08/29/mbNnv4.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">天生棋局(指针)</div></div></a></div><div class="next-post pull_right"><a href="/Ning-Hui.github.io/DFS/"><img class="next_cover lazyload" data-src="https://s2.ax1x.com/2019/11/02/Kb5iH1.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">DFS</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/Ning-Hui.github.io/sort-1/" title="排序算法-1"><img class="relatedPosts_cover lazyload"data-src="https://s2.ax1x.com/2019/10/28/KcadeA.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-11-27</div><div class="relatedPosts_title">排序算法-1</div></div></a></div><div class="relatedPosts_item"><a href="/Ning-Hui.github.io/sort-2/" title="排序算法-2"><img class="relatedPosts_cover lazyload"data-src="https://s2.ax1x.com/2019/12/07/QNP6XD.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-12-07</div><div class="relatedPosts_title">排序算法-2</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: false,
+  verify: false,
+  appId: '0dNioPuDCFsscn6y58dczYiy-gzGzoHsz# leancloud application app id',
+  appKey: 'jbyn5TRGmiiAsYjo7PFFzrYJ# leancloud application app key',
+  placeholder: '一起来玩耍鸭！',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'en',
+  recordIP: false,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Hui Ning</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">简</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js" ></script><script src="/Ning-Hui.github.io/js/utils.js" ></script><script src="/Ning-Hui.github.io/js/main.js" ></script><script src="/Ning-Hui.github.io/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/Ning-Hui.github.io/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/Ning-Hui.github.io/js/search/local-search.js"></script></body></html>

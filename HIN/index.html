@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="baidu-site-verification" content="vi604da58U"><meta name="google-site-verification" content="JwzmnANXlpmQlhwaSORuqpEB6P3Sr-tRhw4R_XDRcEc"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>异构信息网 | AngelNI's Blog</title><meta name="description" content="异构信息网"><meta name="keywords" content="HIN"><meta name="author" content="Hui Ning"><meta name="copyright" content="Hui Ning"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/Ning-Hui.github.io/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="异构信息网"><meta name="twitter:description" content="异构信息网"><meta name="twitter:image" content="https://s2.ax1x.com/2019/10/16/KF2NGV.jpg"><meta property="og:type" content="article"><meta property="og:title" content="异构信息网"><meta property="og:url" content="https://ning-hui.github.io/HIN/"><meta property="og:site_name" content="AngelNI's Blog"><meta property="og:description" content="异构信息网"><meta property="og:image" content="https://s2.ax1x.com/2019/10/16/KF2NGV.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/Ning-Hui.github.io/css/index.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://ning-hui.github.io/HIN/"><link rel="prev" title="树——构造遍历二叉树" href="https://ning-hui.github.io/travel-tree/"><link rel="next" title="Markov-Chain" href="https://ning-hui.github.io/Markov-Chain/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/Ning-Hui.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"Press","message_next":"to bookmark this page"},"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/Ning-Hui.github.io/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/Ning-Hui.github.io/archives/"><div class="headline">Articles</div><div class="length_num">134</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/Ning-Hui.github.io/tags/"><div class="headline">Tags</div><div class="length_num">85</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/Ning-Hui.github.io/categories/"><div class="headline">Categories</div><div class="length_num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Ning-Hui.github.io/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/Ning-Hui.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#知识图谱定义"><span class="toc-number">1.</span> <span class="toc-text">知识图谱定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#异构信息网-HIN"><span class="toc-number">2.</span> <span class="toc-text">异构信息网(HIN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#信息网络-Information-Network"><span class="toc-number">2.1.</span> <span class="toc-text">信息网络(Information Network)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异构-同构信息网络-Heterogeneous-homogeneous-information-Network"><span class="toc-number">2.2.</span> <span class="toc-text">异构&#x2F;同构信息网络(Heterogeneous&#x2F;homogeneous information Network)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络模式-Network-schema"><span class="toc-number">2.3.</span> <span class="toc-text">网络模式(Network schema)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元路径-Meta-path"><span class="toc-number">2.4.</span> <span class="toc-text">元路径(Meta path)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元图-Meta-graph"><span class="toc-number">2.5.</span> <span class="toc-text">元图(Meta graph)</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://s2.ax1x.com/2019/10/16/KF2NGV.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/Ning-Hui.github.io/">AngelNI's Blog</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/Ning-Hui.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Ning-Hui.github.io/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/Ning-Hui.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">异构信息网</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2019-10-16 19:14:40"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-10-16</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2020-04-05 13:35:45"><i class="fa fa-history" aria-hidden="true"></i> Updated 2020-04-05</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/Ning-Hui.github.io/categories/AI/">AI</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>Word count:</span><span class="word-count">619</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>Reading time: 2 min</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>Comments:</span><a href="/Ning-Hui.github.io/HIN/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/Ning-Hui.github.io/HIN/" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><p>攒下所有梦见你的瞬间，够不够换见你一面。<a id="more"></a></p>
+<h1 id="知识图谱定义"><a href="#知识图谱定义" class="headerlink" title="知识图谱定义"></a>知识图谱定义</h1><p>知识图谱：是<strong>结构化的语义知识库</strong>，用于<strong>迅速</strong>描述物理世界中的概念及其相互关系。</p>
+<p>知识图谱通过对<strong>错综复杂的文档</strong>的数据进行有效的<strong>加工、处理、整合</strong>，转化为简单、清晰的“实体,关系,实体”的<strong>三元组</strong>，最后聚合大量知识，从而实现知识的快速响应和推理。</p>
+<p>知识图谱有<strong>自顶向下</strong>和<strong>自底向上</strong>两种构建方式。所谓自顶向下构建是借助百科类网站等结构化数据源，从高质量数据中提取本体和模式信息，加入到知识库中；所谓自底向上构建，则是借助一定的技术手段，从公开采集的数据中提取出资源模式，选择其中置信度较高的新模式，经人工审核之后，加入到知识库中。</p>
+<h1 id="异构信息网-HIN"><a href="#异构信息网-HIN" class="headerlink" title="异构信息网(HIN)"></a>异构信息网(HIN)</h1><h2 id="信息网络-Information-Network"><a href="#信息网络-Information-Network" class="headerlink" title="信息网络(Information Network)"></a>信息网络(Information Network)</h2><p>信息网络是带有对象类型映射ϕ: V → A和链接映射ψ: E → R的有向图G=(V,E)。每个对象v∈V属于某一个特定对象类型φ（v）∈A，且每个链接e∈E属于关系类型集合R：ψ（e）∈R中的特定关系类型。</p>
+<p>如果两个链接属于相同的关系类型，这两个链接共享相同的起始对象类型以及结束对象类。</p>
+<img src="/Ning-Hui.github.io/" class="lazyload" data-src="http://chevereto.angelni.cn/images/2019/10/16/6.jpg"  alt="" border="0">
+
+<h2 id="异构-同构信息网络-Heterogeneous-homogeneous-information-Network"><a href="#异构-同构信息网络-Heterogeneous-homogeneous-information-Network" class="headerlink" title="异构/同构信息网络(Heterogeneous/homogeneous information Network)"></a>异构/同构信息网络(Heterogeneous/homogeneous information Network)</h2><p>如果|A| &gt; 1 或者 |R| &gt; 1 ，则该信息网络为异构信息网络，或简称为异构网络，否则为同构网络。</p>
+<p>比如下面的例子：</p>
+<img src="/Ning-Hui.github.io/" class="lazyload" data-src="http://chevereto.angelni.cn/images/2019/10/16/4.png"  alt="4.png" border="0">
+
+<h2 id="网络模式-Network-schema"><a href="#网络模式-Network-schema" class="headerlink" title="网络模式(Network schema)"></a>网络模式(Network schema)</h2><p>异构信息网络（G = (V, E)with ϕ(v) ∈ A 并且 ψ(e) ∈ R）的network schema TG = (A, R)，要指定objects和links的类型约束，就是这种约束使得异构网络变为半结构化。</p>
+<p>定义为：TG=(A,R)，是信息网络 G=(V, E)的一种 meta模板，这个信息网络有一个object类型映射函数 ϕ:V→A 和 link 类型映射函数ψ:E→R。信息网络G是一个定义在object类型A上的有向图，并且边是R 中的relation。</p>
+<img src="/Ning-Hui.github.io/" class="lazyload" data-src="http://chevereto.angelni.cn/images/2019/10/16/7.png"  alt="" border="0" />
+
+<h2 id="元路径-Meta-path"><a href="#元路径-Meta-path" class="headerlink" title="元路径(Meta path)"></a>元路径(Meta path)</h2><p>Meta Path P定义在 network schema TG=(A,R)上，具体形式为 </p>
+<img src="/Ning-Hui.github.io/" class="lazyload" data-src="http://chevereto.angelni.cn/images/2019/10/16/8.png"  alt="" border="0">
+
+<img src="/Ning-Hui.github.io/" class="lazyload" data-src="http://chevereto.angelni.cn/images/2019/10/16/9.png"  alt="" border="0">
+
+<img src="/Ning-Hui.github.io/" class="lazyload" data-src="http://chevereto.angelni.cn/images/2019/10/16/10.png"  alt="" border="0">
+<img src="/Ning-Hui.github.io/" class="lazyload" data-src="http://chevereto.angelni.cn/images/2019/10/16/11.png"  alt="" border="0">
+
+
+
+<h2 id="元图-Meta-graph"><a href="#元图-Meta-graph" class="headerlink" title="元图(Meta graph)"></a>元图(Meta graph)</h2><p>相比于元路径，元图能够捕捉更复杂地关系</p>
+<p>网络模式(Network schema)的子图 </p>
+<img src="/Ning-Hui.github.io/" class="lazyload" data-src="http://chevereto.angelni.cn/images/2019/10/16/20171103175921554.png"  alt="" border="0" />
+
+
+
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Hui Ning</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://ning-hui.github.io/HIN/">https://ning-hui.github.io/HIN/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/Ning-Hui.github.io/tags/HIN/">HIN</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/04/04/GwaQfK.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/Ning-Hui.github.io/img/2.png" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/Ning-Hui.github.io/img/1.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/Ning-Hui.github.io/travel-tree/"><img class="prev_cover lazyload" data-src="https://s2.ax1x.com/2019/10/18/KegJHO.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">树——构造遍历二叉树</div></div></a></div><div class="next-post pull_right"><a href="/Ning-Hui.github.io/Markov-Chain/"><img class="next_cover lazyload" data-src="https://s2.ax1x.com/2019/10/16/KF8vtI.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Markov-Chain</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: false,
+  verify: false,
+  appId: '0dNioPuDCFsscn6y58dczYiy-gzGzoHsz# leancloud application app id',
+  appKey: 'jbyn5TRGmiiAsYjo7PFFzrYJ# leancloud application app key',
+  placeholder: '一起来玩耍鸭！',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'en',
+  recordIP: false,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Hui Ning</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">简</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js" ></script><script src="/Ning-Hui.github.io/js/utils.js" ></script><script src="/Ning-Hui.github.io/js/main.js" ></script><script src="/Ning-Hui.github.io/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/Ning-Hui.github.io/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/Ning-Hui.github.io/js/search/local-search.js"></script></body></html>
