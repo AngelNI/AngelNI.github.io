@@ -340,13 +340,6 @@ canvas:not(#ribbon-canvas),
   -ms-animation: scroll-down-effect 1.5s infinite;
   animation: scroll-down-effect 1.5s infinite;
 }
-.avatar-img {
-  -webkit-animation: avatar_turn_around 2s linear infinite;
-  -moz-animation: avatar_turn_around 2s linear infinite;
-  -o-animation: avatar_turn_around 2s linear infinite;
-  -ms-animation: avatar_turn_around 2s linear infinite;
-  animation: avatar_turn_around 2s linear infinite;
-}
 .reward-main {
   -webkit-animation: donate_effcet 0.3s 0.1s ease both;
   -moz-animation: donate_effcet 0.3s 0.1s ease both;
@@ -1489,11 +1482,9 @@ canvas:not(#ribbon-canvas),
   overflow: auto;
   margin: 0 0 1rem;
   padding: 0;
-  background: #292d3e;
-  color: #a6accd;
+  background: #f6f8fa;
+  color: #90a4ae;
   line-height: 20px;
-  counter-reset: line;
-  white-space: pre-wrap;
 }
 .code-area-wrap {
   position: relative;
@@ -1541,7 +1532,7 @@ blockquote footer cite:before {
 #article-container pre code {
   padding: 0;
   background: none;
-  color: #a6accd;
+  color: #90a4ae;
   text-shadow: none;
 }
 #article-container figure.highlight {
@@ -1554,20 +1545,11 @@ blockquote footer cite:before {
   border: none;
 }
 #article-container figure.highlight .line::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
-}
-#article-container figure.highlight .line:before {
-  display: inline-block;
-  padding: 0 0.3rem 0 0;
-  min-width: 1.6rem;
-  color: #3a3f58;
-  content: counter(line);
-  counter-increment: line;
-  text-align: left;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container figure.highlight .line.marked {
-  background-color: rgba(113,124,180,0.314);
+  background-color: rgba(128,203,196,0.251);
 }
 #article-container figure.highlight table {
   position: relative;
@@ -1583,7 +1565,7 @@ blockquote footer cite:before {
 #article-container figure.highlight figcaption {
   zoom: 1;
   padding: 0.3rem 0 0.1rem 0.7rem;
-  color: #a6accd;
+  color: #90a4ae;
   font-size: 1em;
   line-height: 1em;
 }
@@ -1598,23 +1580,23 @@ blockquote footer cite:before {
 #article-container figure.highlight figcaption a {
   float: right;
   padding-right: 10px;
-  color: #a6accd;
+  color: #90a4ae;
 }
 #article-container figure.highlight figcaption a:hover {
-  border-bottom-color: #a6accd;
+  border-bottom-color: #90a4ae;
 }
 #article-container figure.highlight .gutter pre {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-  background-color: #292d3e;
-  color: #3a3f58;
+  background-color: #f6f8fa;
+  color: #cfd8dc;
   text-align: right;
 }
 #article-container figure.highlight .code pre {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   width: 100%;
-  background-color: #292d3e;
+  background-color: #f6f8fa;
 }
 #article-container figure.highlight .line {
   height: 1rem;
@@ -1635,20 +1617,20 @@ blockquote footer cite:before {
   border: none;
 }
 #article-container pre .deletion {
-  background: #008000;
+  background: #fdd;
 }
 #article-container pre .addition {
-  background: #800000;
+  background: #dfd;
 }
 #article-container pre .meta {
-  color: #c792ea;
+  color: #7c4dff;
 }
 #article-container pre .comment {
-  color: #676e95;
+  color: rgba(144,164,174,0.565);
 }
 #article-container pre .comment::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container pre .variable,
 #article-container pre .attribute,
@@ -1662,7 +1644,7 @@ blockquote footer cite:before {
 #article-container pre .tag .name,
 #article-container pre .css .class,
 #article-container pre .css .pseudo {
-  color: #ff5370;
+  color: #e53935;
 }
 #article-container pre .variable::selection,
 #article-container pre .attribute::selection,
@@ -1676,15 +1658,15 @@ blockquote footer cite:before {
 #article-container pre .tag .name::selection,
 #article-container pre .css .class::selection,
 #article-container pre .css .pseudo::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container pre .tag {
-  color: #89ddff;
+  color: #39adb5;
 }
 #article-container pre .tag::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container pre .number,
 #article-container pre .preprocessor,
@@ -1692,7 +1674,7 @@ blockquote footer cite:before {
 #article-container pre .params,
 #article-container pre .constant,
 #article-container pre .command {
-  color: #f78c6c;
+  color: #f76d47;
 }
 #article-container pre .number::selection,
 #article-container pre .preprocessor::selection,
@@ -1700,15 +1682,15 @@ blockquote footer cite:before {
 #article-container pre .params::selection,
 #article-container pre .constant::selection,
 #article-container pre .command::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container pre .built_in {
-  color: #ffcb6b;
+  color: #ffb62c;
 }
 #article-container pre .built_in::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container pre .ruby .class .title,
 #article-container pre .css .rules .attribute,
@@ -1721,7 +1703,7 @@ blockquote footer cite:before {
 #article-container pre .special,
 #article-container pre .number,
 #article-container pre .formula {
-  color: #c3e88d;
+  color: #91b859;
 }
 #article-container pre .ruby .class .title::selection,
 #article-container pre .css .rules .attribute::selection,
@@ -1734,19 +1716,19 @@ blockquote footer cite:before {
 #article-container pre .special::selection,
 #article-container pre .number::selection,
 #article-container pre .formula::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container pre .keyword,
 #article-container pre .title,
 #article-container pre .css .hexcolor {
-  color: #89ddff;
+  color: #39adb5;
 }
 #article-container pre .keyword::selection,
 #article-container pre .title::selection,
 #article-container pre .css .hexcolor::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container pre .function,
 #article-container pre .python .decorator,
@@ -1756,7 +1738,7 @@ blockquote footer cite:before {
 #article-container pre .perl .sub,
 #article-container pre .javascript .title,
 #article-container pre .coffeescript .title {
-  color: #82aaff;
+  color: #6182b8;
 }
 #article-container pre .function::selection,
 #article-container pre .python .decorator::selection,
@@ -1766,25 +1748,25 @@ blockquote footer cite:before {
 #article-container pre .perl .sub::selection,
 #article-container pre .javascript .title::selection,
 #article-container pre .coffeescript .title::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 #article-container pre .tag .attr,
 #article-container pre .javascript .function {
-  color: #c792ea;
+  color: #7c4dff;
 }
 #article-container pre .tag .attr::selection,
 #article-container pre .javascript .function::selection {
-  background: rgba(113,124,180,0.314);
-  color: #a6accd;
+  background: rgba(128,203,196,0.251);
+  color: #90a4ae;
 }
 .highlight-tools {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 1.4rem;
-  background: #1f222f;
-  color: #a6accd;
+  background: #e6ebf1;
+  color: #90a4ae;
   font-size: 14px;
 }
 .highlight-close {
@@ -2298,13 +2280,6 @@ blockquote footer cite:before {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-}
-#footer:before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  content: '';
 }
 #footer-wrap {
   position: relative;
@@ -2985,8 +2960,9 @@ figure.gallery-group .gallery-group-name:after {
   position: relative;
   margin: 0 0 1rem;
   padding: 15px;
-  border: 1px solid #eee;
-  border-left-width: 5px;
+  border: initial;
+  border-left: 5px solid #eee;
+  background-color: #f9f9f9;
   border-radius: 3px;
 }
 .note h2,
@@ -2994,7 +2970,7 @@ figure.gallery-group .gallery-group-name:after {
 .note h4,
 .note h5,
 .note h6 {
-  margin-top: 0;
+  margin-top: 3px;
   margin-bottom: 0;
   padding-top: 0 !important;
   border-bottom: initial;
@@ -3017,7 +2993,18 @@ figure.gallery-group .gallery-group-name:after {
 .note img:last-child {
   margin-bottom: 0 !important;
 }
+.note:not(.no-icon) {
+  padding-left: 45px;
+}
+.note:not(.no-icon)::before {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  font-size: larger;
+  font-family: 'FontAwesome';
+}
 .note.default {
+  background-color: #f7f7f7;
   border-left-color: #777;
 }
 .note.default h2,
@@ -3027,7 +3014,12 @@ figure.gallery-group .gallery-group-name:after {
 .note.default h6 {
   color: #777;
 }
+.note.default:not(.no-icon)::before {
+  content: '\f0a9';
+  color: #777;
+}
 .note.primary {
+  background-color: #f5f0fa;
   border-left-color: #6f42c1;
 }
 .note.primary h2,
@@ -3037,7 +3029,12 @@ figure.gallery-group .gallery-group-name:after {
 .note.primary h6 {
   color: #6f42c1;
 }
+.note.primary:not(.no-icon)::before {
+  content: '\f055';
+  color: #6f42c1;
+}
 .note.info {
+  background-color: #eef7fa;
   border-left-color: #428bca;
 }
 .note.info h2,
@@ -3047,7 +3044,12 @@ figure.gallery-group .gallery-group-name:after {
 .note.info h6 {
   color: #428bca;
 }
+.note.info:not(.no-icon)::before {
+  content: '\f05a';
+  color: #428bca;
+}
 .note.success {
+  background-color: #eff8f0;
   border-left-color: #5cb85c;
 }
 .note.success h2,
@@ -3057,7 +3059,12 @@ figure.gallery-group .gallery-group-name:after {
 .note.success h6 {
   color: #5cb85c;
 }
+.note.success:not(.no-icon)::before {
+  content: '\f058';
+  color: #5cb85c;
+}
 .note.warning {
+  background-color: #fdf8ea;
   border-left-color: #f0ad4e;
 }
 .note.warning h2,
@@ -3067,7 +3074,12 @@ figure.gallery-group .gallery-group-name:after {
 .note.warning h6 {
   color: #f0ad4e;
 }
+.note.warning:not(.no-icon)::before {
+  content: '\f06a';
+  color: #f0ad4e;
+}
 .note.danger {
+  background-color: #fcf1f2;
   border-left-color: #d9534f;
 }
 .note.danger h2,
@@ -3075,6 +3087,10 @@ figure.gallery-group .gallery-group-name:after {
 .note.danger h4,
 .note.danger h5,
 .note.danger h6 {
+  color: #d9534f;
+}
+.note.danger:not(.no-icon)::before {
+  content: '\f056';
   color: #d9534f;
 }
 .layout_page {
@@ -3717,7 +3733,7 @@ img {
   top: 0;
   z-index: 1;
   padding: 7px 10px;
-  color: #a6accd;
+  color: #90a4ae;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -3749,7 +3765,7 @@ img {
   position: absolute;
   left: 15px;
   z-index: 1;
-  color: #a6accd;
+  color: #90a4ae;
   text-transform: capitalize;
   font-weight: bold;
   font-size: 0.8rem;
@@ -3761,8 +3777,8 @@ img {
   top: 0;
   right: 0;
   z-index: 1;
-  background: #1f222f;
-  color: #89ddff;
+  background: #e6ebf1;
+  color: #39adb5;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -3772,7 +3788,7 @@ img {
   top: 0.4rem;
   right: 10px;
   z-index: 1;
-  color: #89ddff;
+  color: #39adb5;
   cursor: pointer;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -3781,7 +3797,7 @@ img {
   transition: color 0.2s;
 }
 .highlight-tools .fa-clipboard:hover {
-  color: #3bc6ff;
+  color: #2e8a91;
 }
 .katex-wrap {
   overflow: auto;
@@ -4660,6 +4676,10 @@ img {
 }
 [data-theme='dark'] #mobile-sidebar #mobile-sidebar-menus a {
   color: rgba(255,255,255,0.6) !important;
+}
+[data-theme='dark'] .note {
+  filter: brightness(0.7);
+  color: #4c4948;
 }
 [data-theme='dark'] #hexo-blog-encrypt label,
 [data-theme='dark'] #hexo-blog-encrypt input {
