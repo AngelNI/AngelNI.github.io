@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angelni.github.io/link/index.html</loc>
+    
+    <lastmod>2020-04-06T07:34:47.711Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/about/index.html</loc>
+    
+    <lastmod>2020-04-06T07:34:11.867Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angelni.github.io/categories/index.html</loc>
     
     <lastmod>2020-04-06T07:22:47.916Z</lastmod>
@@ -12,20 +26,6 @@
     <loc>https://angelni.github.io/tags/index.html</loc>
     
     <lastmod>2020-04-06T07:21:53.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/link/index.html</loc>
-    
-    <lastmod>2020-04-06T07:07:15.038Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/about/index.html</loc>
-    
-    <lastmod>2020-04-06T07:05:10.721Z</lastmod>
     
   </url>
   
