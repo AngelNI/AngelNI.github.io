@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://angelni.github.io/AngelNI.github.io/knn-image/</loc>
+    <lastmod>2020-04-06</lastmod>
+  </url>  <url>
+    <loc>https://angelni.github.io/AngelNI.github.io/Inverse-number/</loc>
+    <lastmod>2020-04-06</lastmod>
+  </url>  <url>
+    <loc>https://angelni.github.io/AngelNI.github.io/monotonic-queue/</loc>
+    <lastmod>2020-04-06</lastmod>
+  </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/%E5%A4%A7%E6%95%B0%E5%8F%96%E6%A8%A1/</loc>
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
@@ -136,9 +145,6 @@
     <loc>https://angelni.github.io/AngelNI.github.io/HTML%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
-    <loc>https://angelni.github.io/AngelNI.github.io/Inverse-number/</loc>
-    <lastmod>2020-04-06</lastmod>
-  </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/java/</loc>
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
@@ -161,9 +167,6 @@
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/KM/</loc>
-    <lastmod>2020-04-06</lastmod>
-  </url>  <url>
-    <loc>https://angelni.github.io/AngelNI.github.io/knn-image/</loc>
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/KNN-Practice/</loc>
@@ -233,9 +236,6 @@
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/minpath/</loc>
-    <lastmod>2020-04-06</lastmod>
-  </url>  <url>
-    <loc>https://angelni.github.io/AngelNI.github.io/monotonic-queue/</loc>
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/My-World/</loc>
