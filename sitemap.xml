@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angelni.github.io/test/</loc>
+    
+    <lastmod>2020-04-06T03:41:49.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/photo/index.html</loc>
+    
+    <lastmod>2020-04-06T02:30:31.484Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/Makedown/</loc>
+    
+    <lastmod>2020-04-06T02:27:31.817Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/commemorate-COVID-2019/</loc>
+    
+    <lastmod>2020-04-06T02:09:25.164Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angelni.github.io/html-login/</loc>
     
-    <lastmod>2020-04-06T01:57:34.607Z</lastmod>
+    <lastmod>2020-04-06T02:05:52.535Z</lastmod>
     
   </url>
   
@@ -19,13 +47,6 @@
     <loc>https://angelni.github.io/link/index.html</loc>
     
     <lastmod>2020-04-05T14:51:12.677Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/commemorate-COVID-2019/</loc>
-    
-    <lastmod>2020-04-05T10:51:13.640Z</lastmod>
     
   </url>
   
@@ -306,13 +327,6 @@
     <loc>https://angelni.github.io/Looking-at-the-stars/</loc>
     
     <lastmod>2020-04-05T05:16:24.144Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/Makedown/</loc>
-    
-    <lastmod>2020-04-05T05:15:54.163Z</lastmod>
     
   </url>
   

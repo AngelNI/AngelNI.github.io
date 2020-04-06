@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://angelni.github.io/AngelNI.github.io/html-login/</loc>
+    <loc>https://angelni.github.io/AngelNI.github.io/test/</loc>
+    <lastmod>2020-04-06</lastmod>
+  </url>  <url>
+    <loc>https://angelni.github.io/AngelNI.github.io/Makedown/</loc>
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/commemorate-COVID-2019/</loc>
-    <lastmod>2020-04-05</lastmod>
+    <lastmod>2020-04-06</lastmod>
+  </url>  <url>
+    <loc>https://angelni.github.io/AngelNI.github.io/html-login/</loc>
+    <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/java/</loc>
     <lastmod>2020-04-05</lastmod>
@@ -116,9 +122,6 @@
     <lastmod>2020-04-05</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/Looking-at-the-stars/</loc>
-    <lastmod>2020-04-05</lastmod>
-  </url>  <url>
-    <loc>https://angelni.github.io/AngelNI.github.io/Makedown/</loc>
     <lastmod>2020-04-05</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/Markov-Chain/</loc>
