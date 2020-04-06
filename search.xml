@@ -838,7 +838,7 @@
       
       <categories>
           
-          <category> Data-Structure </category>
+          <category> Algorithm </category>
           
       </categories>
       
@@ -1863,7 +1863,7 @@
       
       <categories>
           
-          <category> ubuntu </category>
+          <category> sharing </category>
           
       </categories>
       
@@ -1983,12 +1983,12 @@
       <link href="/AngelNI.github.io/untitled/"/>
       <url>/AngelNI.github.io/untitled/</url>
       
-        <content type="html"><![CDATA[<p>如果我在勇敢点，结果会不会比想象中的要好。<a id="more"></a></p><p>Git是一个开源的分布式版本控制系统，分布式相比集中式的最大区别是Git没有“中央服务器”，每位开发者都可以通过克隆（git clone）远程库，在本地机器上存储一个完整的Git仓库，还可以把代码的修改提交到本地库。当然了，本地库修改完成后也可以上传到远程仓库，操作方便。</p><p>在学习git的操作方法，总是偶然的上传成功。这次不一样了，向大家介绍每一步的操作流程和成功案例。</p><ul><li>git clone + “要克隆的仓库地址链接”</li></ul><img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/10/02/uaQlmd.png"  alt="" border="0" /><p>克隆之后对仓库文件进行处理，添加或删除，修改或重写。</p><ul><li>进入以克隆的文件夹，并执行 git init初始化</li></ul><img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/10/02/uaQskq.png"  alt="" border="0" /><ul><li>git add * 将所有文件添加到缓存</li><li>git pull + “文件储存的绝对路径”</li><li>git commit -m +”备注”</li><li>git remote add “备注” +”仓库链接（也是克隆的链接地址）”</li><li>最后，git push 静静等待，操作成功。</li></ul><p>如果你顺利完成了以上步骤，那么就要恭喜你了，已经成功上传到github仓库。其他储存仓库操作步骤类似。</p>]]></content>
+        <content type="html"><![CDATA[<p>如果我在勇敢点，结果会不会比想象中的要好。<a id="more"></a></p><p>Git是一个开源的分布式版本控制系统，分布式相比集中式的最大区别是Git没有“中央服务器”，每位开发者都可以通过克隆（git clone）远程库，在本地机器上存储一个完整的Git仓库，还可以把代码的修改提交到本地库。当然了，本地库修改完成后也可以上传到远程仓库，操作方便。</p><p>在学习git的操作方法，总是偶然的上传成功。这次不一样了，向大家介绍每一步的操作流程和成功案例。</p><ul><li>git clone + “要克隆的仓库地址链接”</li></ul><img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/10/02/uaQlmd.png"  alt="" border="0" /><p>克隆之后对仓库文件进行处理，添加或删除，修改或重写。</p><ul><li>进入以克隆的文件夹，并执行 git init初始化</li></ul><img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/10/02/uaQskq.png"  alt="" border="0" /><ul><li>git add . 将所有文件添加到缓存</li><li>git commit -m +”备注”</li><li>git remote add orgin <em><a href="https://github.com/AngelNI/CDN.git" target="_blank" rel="noopener">https://github.com/AngelNI/CDN.git</a></em></li><li>git push -u orgin master</li></ul><p>如果你顺利完成了以上步骤，那么就要恭喜你了，已经成功上传到github仓库。其他储存仓库操作步骤类似。</p>]]></content>
       
       
       <categories>
           
-          <category> Git </category>
+          <category> sharing </category>
           
       </categories>
       
@@ -2363,7 +2363,7 @@
       
       <categories>
           
-          <category> Ubuntu </category>
+          <category> sharing </category>
           
       </categories>
       
@@ -2888,7 +2888,7 @@
       
       <categories>
           
-          <category> Game </category>
+          <category> sharing </category>
           
       </categories>
       

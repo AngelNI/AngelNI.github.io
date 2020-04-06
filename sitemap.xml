@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angelni.github.io/ubuntu-beauty/</loc>
+    
+    <lastmod>2020-04-06T09:26:12.675Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/Ubutu_system_file_tree/</loc>
+    
+    <lastmod>2020-04-06T09:25:57.602Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/untitled/</loc>
+    
+    <lastmod>2020-04-06T09:25:26.601Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/Tetris/</loc>
+    
+    <lastmod>2020-04-06T09:22:28.784Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/BiTree-Op/</loc>
+    
+    <lastmod>2020-04-06T09:22:00.712Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angelni.github.io/knn-image/</loc>
     
     <lastmod>2020-04-06T09:16:11.508Z</lastmod>
@@ -117,13 +152,6 @@
     <loc>https://angelni.github.io/binary_search/</loc>
     
     <lastmod>2020-04-06T08:35:55.462Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/BiTree-Op/</loc>
-    
-    <lastmod>2020-04-06T08:35:48.960Z</lastmod>
     
   </url>
   
@@ -765,13 +793,6 @@
   </url>
   
   <url>
-    <loc>https://angelni.github.io/Tetris/</loc>
-    
-    <lastmod>2020-04-06T08:05:20.650Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://angelni.github.io/TF-CNN/</loc>
     
     <lastmod>2020-04-06T08:05:12.234Z</lastmod>
@@ -831,27 +852,6 @@
     <loc>https://angelni.github.io/tree-calculate/</loc>
     
     <lastmod>2020-04-06T08:04:03.852Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/ubuntu-beauty/</loc>
-    
-    <lastmod>2020-04-06T08:02:43.618Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/Ubutu_system_file_tree/</loc>
-    
-    <lastmod>2020-04-06T08:02:36.651Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/untitled/</loc>
-    
-    <lastmod>2020-04-06T08:02:28.624Z</lastmod>
     
   </url>
   
