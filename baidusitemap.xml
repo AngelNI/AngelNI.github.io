@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://angelni.github.io/AngelNI.github.io/2019-nCov/</loc>
+    <lastmod>2020-04-06</lastmod>
+  </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/test/</loc>
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
@@ -326,9 +329,6 @@
     <lastmod>2020-04-05</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/01Backpack-Practice/</loc>
-    <lastmod>2020-04-05</lastmod>
-  </url>  <url>
-    <loc>https://angelni.github.io/AngelNI.github.io/2019-nCov/</loc>
     <lastmod>2020-04-05</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/critical-path/</loc>
