@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>为你的博客提速</title>
+      <link href="/AngelNI.github.io/speed-blog/"/>
+      <url>/AngelNI.github.io/speed-blog/</url>
+      
+        <content type="html"><![CDATA[<p>是故圣人一守司其门户，审察其所先后，度权量能，校其伎巧短长。</p><h1 id="为你的博客提速"><a href="#为你的博客提速" class="headerlink" title="为你的博客提速"></a>为你的博客提速</h1><p>经营博客已经快一年了，更换了三次主题，从中学习了很多，当然也踩了很多的坑，但总的来说还是有收获的。今天为大家介绍一些博客提速的方法，有些自己也亲身实践过。</p><h2 id="1、CDN提速"><a href="#1、CDN提速" class="headerlink" title="1、CDN提速"></a>1、CDN提速</h2><p>CDN全称叫做内容分发网络（Content Delivery Network），是在现有 Internet 中增加的一层新的网络架构，由遍布全国的高性能加速节点构成。</p><p>由于某某限制，只能利用免费的CDN为博客加速。当然你也可以自己搭建免费的CDN，其中最常用的是jsDelivr+Github建立免费CDN。</p><p>您可以参考这篇博客<a href="https://angelni.github.io/AngelNI.github.io/jsDelivr-Github/">jsDelivr+Github建立免费CDN</a></p><p><strong>整个博客使用CDN</strong>(未实践)</p><p>常见的免费cdn有 百度云加速，加速乐，又拍云；<br><strong>加速乐</strong> 每个月有3600GB免费流量，加速乐官网：<code>https://www.yunaq.com/jsl/#price</code></p><h2 id="2、更改图片格式"><a href="#2、更改图片格式" class="headerlink" title="2、更改图片格式"></a>2、更改图片格式</h2><p>在写博客时，难免要用到图片。经过时间累积，大量的图片会大大降低博客的速度。</p><p>当你用GOOGLE的<a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener">PageSpeed Insights</a>为你的博客进行速度评分时，出现最多的是采用新一代格式提供图片，</p><p>官方解释——JPEG 2000、JPEG XR 和 WebP 等图片格式的压缩效果通常比 PNG 或 JPEG 好，因此下载速度更快，消耗的数据流量更少。</p><p>自己亲身体会，所有图片更换为webp格式，适当调整图片大小，再加上CDN提速后，博客轻快了很多~</p><h2 id="3、网站预加载脚本"><a href="#3、网站预加载脚本" class="headerlink" title="3、网站预加载脚本"></a>3、网站预加载脚本</h2><p>instant.page，无意间看到这样一个脚本，号称可以瞬间提高网站页面加载速度。</p><p><strong>原理：</strong></p><ul><li>在用户点击网站链接之前，他们将鼠标悬停在该链接上。当用户徘徊 65 毫秒时，他们将点击该链接有两个机会，因此 instant.page 此时开始预加载，平均超过 300 毫秒，以便页面预加载。</li><li>instant.page 是渐进式增强 - 对不支持它的浏览器没有影响。</li></ul><p>需要注意的是</p><ol><li><p>使用 instant.page 会显著增加自己的网站的 PV 以及请求量。（对于使用CDN全站加速的童鞋可能要多考虑一下了，因为请求数也是要收费的。）</p></li><li><p>使用 instant.page 只会预加载 html 页面，而不会加载图片等资源。</p></li></ol><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>下述引用方法，只需添加在网站&lt; /body &gt;标签之前添加即可。</p><h4 id="1-使用官方提供的带有-Cloudflare-加速的脚本"><a href="#1-使用官方提供的带有-Cloudflare-加速的脚本" class="headerlink" title="1.使用官方提供的带有 Cloudflare 加速的脚本"></a>1.使用官方提供的带有 Cloudflare 加速的脚本</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//instant.page/1.2.2"</span> <span class="attr">type</span>=<span class="string">"module"</span> <span class="attr">integrity</span>=<span class="string">"sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="2-自托管"><a href="#2-自托管" class="headerlink" title="2.自托管"></a>2.自托管</h4><p>只需将<a href="https://www.zrahh.com/js/instantclick-1.2.2.js" target="_blank" rel="noopener">js代码</a>上传到自己的服务器即可。</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"`存放路径`/instantclick-1.2.2.js"</span> <span class="attr">type</span>=<span class="string">"module"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="3-CDN引用"><a href="#3-CDN引用" class="headerlink" title="3.CDN引用"></a>3.CDN引用</h4><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> sharing </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> speed blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>图标测试</title>
       <link href="/AngelNI.github.io/test/"/>
       <url>/AngelNI.github.io/test/</url>
