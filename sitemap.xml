@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angelni.github.io/about/index.html</loc>
+    
+    <lastmod>2020-04-13T02:12:46.270Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angelni.github.io/photo/index.html</loc>
     
     <lastmod>2020-04-11T11:09:19.026Z</lastmod>
@@ -964,13 +971,6 @@
     <loc>https://angelni.github.io/link/index.html</loc>
     
     <lastmod>2020-04-06T07:34:47.711Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/about/index.html</loc>
-    
-    <lastmod>2020-04-06T07:34:11.867Z</lastmod>
     
   </url>
   
