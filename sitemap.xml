@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angelni.github.io/A-Star/</loc>
+    
+    <lastmod>2020-04-25T07:48:07.752Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angelni.github.io/note_numpy/</loc>
     
-    <lastmod>2020-04-25T07:31:52.803Z</lastmod>
+    <lastmod>2020-04-25T07:43:27.836Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>https://angelni.github.io/tips/</loc>
     
     <lastmod>2020-04-22T09:52:09.117Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/A-Star/</loc>
-    
-    <lastmod>2020-04-15T05:06:12.077Z</lastmod>
     
   </url>
   
