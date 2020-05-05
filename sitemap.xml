@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angelni.github.io/photo/2020/index.html</loc>
+    
+    <lastmod>2020-05-05T07:23:32.892Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/sunrise/</loc>
+    
+    <lastmod>2020-05-05T07:23:16.801Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angelni.github.io/GA/</loc>
     
-    <lastmod>2020-04-28T09:51:51.746Z</lastmod>
+    <lastmod>2020-04-29T00:13:49.328Z</lastmod>
     
   </url>
   
@@ -89,13 +103,6 @@
     <loc>https://angelni.github.io/photo/2019/index.html</loc>
     
     <lastmod>2020-04-08T10:51:26.102Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/photo/2020/index.html</loc>
-    
-    <lastmod>2020-04-08T10:44:52.936Z</lastmod>
     
   </url>
   

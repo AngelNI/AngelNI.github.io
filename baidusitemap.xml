@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://angelni.github.io/AngelNI.github.io/sunrise/</loc>
+    <lastmod>2020-05-05</lastmod>
+  </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/GA/</loc>
-    <lastmod>2020-04-28</lastmod>
+    <lastmod>2020-04-29</lastmod>
   </url>  <url>
     <loc>https://angelni.github.io/AngelNI.github.io/The%20Note%20of%20Learning%20Numpy/</loc>
     <lastmod>2020-04-25</lastmod>
