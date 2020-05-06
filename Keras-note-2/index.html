@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="baidu-site-verification" content="vi604da58U"><meta name="google-site-verification" content="JwzmnANXlpmQlhwaSORuqpEB6P3Sr-tRhw4R_XDRcEc"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keras-learn-note(2) | AngelNI's Blog</title><meta name="description" content="Keras-learn-note(2)"><meta name="keywords" content="Keras-note"><meta name="author" content="Hui Ning"><meta name="copyright" content="Hui Ning"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/imgs/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="https://hm.baidu.com"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Keras-learn-note(2)"><meta name="twitter:description" content="Keras-learn-note(2)"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/gallary/78.webp"><meta property="og:type" content="article"><meta property="og:title" content="Keras-learn-note(2)"><meta property="og:url" content="https://angelni.github.io/Keras-note-2/"><meta property="og:site_name" content="AngelNI's Blog"><meta property="og:description" content="Keras-learn-note(2)"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/gallary/78.webp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/AngelNI.github.io/css/index.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://angelni.github.io/Keras-note-2/"><link rel="prev" title="Stanford-Machine-Learning-camp" href="https://angelni.github.io/Stanford-Machine-Learning-camp/"><link rel="next" title="Keras-learn-note(1)" href="https://angelni.github.io/Keras-note-1/"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '784-559-7194',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c0aadf140996faae5fdf1fa9ef178180";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-144678502-1', 'auto');
+ga('send', 'pageview');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/AngelNI.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://angelni.github.io/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"Press","message_next":"to bookmark this page"},"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script src="https://www.zrahh.com/js/instantclick-1.2.2.js" type="module"></script><script src="activate-power-mode.js"></script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/imgs/avatar.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/imgs/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/AngelNI.github.io/archives/"><div class="headline">Articles</div><div class="length_num">143</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/AngelNI.github.io/tags/"><div class="headline">Tags</div><div class="length_num">93</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/AngelNI.github.io/categories/"><div class="headline">Categories</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Friends</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="http://music.angelni.cn/" target="_blank" rel="noopener"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/AngelNI.github.io/photo"><i class="fa-fw fa fa-film"></i><span> Photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/suisuinian/"><i class="fa-fw fa fa-bullhorn"></i><span> My Voice</span></a></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Keras后端😉"><span class="toc-number">1.</span> <span class="toc-text">1  Keras后端😉</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-切换后端"><span class="toc-number">1.1.</span> <span class="toc-text">1.1  切换后端</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-第一个模型：全连接网络🤩"><span class="toc-number">2.</span> <span class="toc-text">2  第一个模型：全连接网络🤩</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-函数介绍"><span class="toc-number">2.1.</span> <span class="toc-text">2.1  函数介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-Input"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1  Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-Dense"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2  Dense</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-Model"><span class="toc-number">2.1.3.</span> <span class="toc-text">2.1.3  Model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-4-Model模型方法"><span class="toc-number">2.1.4.</span> <span class="toc-text">2.1.4  Model模型方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Keras-实现手写数字识别🤪"><span class="toc-number">3.</span> <span class="toc-text">3  Keras 实现手写数字识别🤪</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-总结💪"><span class="toc-number">4.</span> <span class="toc-text">4.总结💪</span></a></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/gallary/78.webp)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/AngelNI.github.io/">AngelNI's Blog</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/link/"><i class="fa-fw fa fa-link"></i><span> Friends</span></a></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="http://music.angelni.cn/" target="_blank" rel="noopener"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/AngelNI.github.io/photo"><i class="fa-fw fa fa-film"></i><span> Photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/AngelNI.github.io/suisuinian/"><i class="fa-fw fa fa-bullhorn"></i><span> My Voice</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Keras-learn-note(2)</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2019-08-20 07:09:24"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-08-20</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2020-04-06 16:30:10"><i class="fa fa-history" aria-hidden="true"></i> Updated 2020-04-06</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/AngelNI.github.io/categories/AI/">AI</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>Word count:</span><span class="word-count">1.9k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>Reading time: 7 min</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>Comments:</span><a href="/AngelNI.github.io/Keras-note-2/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/AngelNI.github.io/Keras-note-2/" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><p> 要么出众，要么出局，乾坤未定，你我都是黑马。<a id="more"></a></p>
+<h1 id="1-Keras后端😉"><a href="#1-Keras后端😉" class="headerlink" title="1  Keras后端😉"></a>1  Keras后端😉</h1><p>Keras是一个模型级的库，提供了快速构建深度学习网络的模块。Keras并不处理如张量乘法、卷积等底层操作。这些操作依赖于某种特定的、优化良好的张量操作库。Keras依赖于处理张量的库就称为“后端引擎”。Keras提供了三种后端引擎Theano/Tensorflow/CNTK，并将其函数统一封装，使得用户可以以同一个接口调用不同后端引擎的函数</p>
+<p>Theano是一个开源的符号主义张量操作框架，由蒙特利尔大学LISA/MILA实验室开发。</p>
+<p>TensorFlow是一个符号主义的张量操作框架，由Google开发。</p>
+<p>CNTK是一个由微软开发的商业级工具包。</p>
+<h2 id="1-1-切换后端"><a href="#1-1-切换后端" class="headerlink" title="1.1  切换后端"></a>1.1  切换后端</h2><p>如果你至少运行过一次Keras，你将在下面的目录下找到Keras的配置文件：</p>
+<p>c:/user/.keras/keras.json</p>
+<p>如果该目录下没有该文件，你可以手动创建一个</p>
+<p>文件的默认配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;image_data_format&quot;: &quot;channels_last&quot;,</span><br><span class="line">    &quot;epsilon&quot;: 1e-07,</span><br><span class="line">    &quot;floatx&quot;: &quot;float32&quot;,</span><br><span class="line">    &quot;backend&quot;: &quot;tensorflow&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将backend字段的值改写为你需要使用的后端：theano或tensorflow或者CNTK，即可完成后端的切换</p>
+<h1 id="2-第一个模型：全连接网络🤩"><a href="#2-第一个模型：全连接网络🤩" class="headerlink" title="2  第一个模型：全连接网络🤩"></a>2  第一个模型：全连接网络🤩</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Input, Dense</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Model</span><br><span class="line"></span><br><span class="line"><span class="comment"># this returns a tensor</span></span><br><span class="line">inputs = Input(shape=(<span class="number">784</span>,))</span><br><span class="line"></span><br><span class="line"><span class="comment"># a layer instance is callable on a tensor, and returns a tensor</span></span><br><span class="line">x = Dense(<span class="number">64</span>, activation=<span class="string">'relu'</span>)(inputs)</span><br><span class="line">x = Dense(<span class="number">64</span>, activation=<span class="string">'relu'</span>)(x)</span><br><span class="line">predictions = Dense(<span class="number">10</span>, activation=softmax)(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># this creates a model that includes</span></span><br><span class="line"><span class="comment"># the Input layer and three Dense layers</span></span><br><span class="line">model = Model(input=inputs, output=predictions)</span><br><span class="line">model.compile(optimizer=<span class="string">'rmsprop'</span>,</span><br><span class="line">              loss=<span class="string">'categorical_crossentropy'</span>,</span><br><span class="line">              metrics=[<span class="string">'accuracy'</span>])</span><br><span class="line">model.fit(data, labels)  <span class="comment"># starts training</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">softmax</span><span class="params">(x, axis=<span class="number">-1</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Softmax of a tensor.</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">    # Arguments</span></span><br><span class="line"><span class="string">        x: A tensor or variable.</span></span><br><span class="line"><span class="string">        axis: The dimension softmax would be performed on.</span></span><br><span class="line"><span class="string">            The default is -1 which indicates the last dimension.</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">    # Returns</span></span><br><span class="line"><span class="string">        A tensor.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">return</span> tf.nn.softmax(x, dim=axis)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-1-函数介绍"><a href="#2-1-函数介绍" class="headerlink" title="2.1  函数介绍"></a>2.1  函数介绍</h2><h3 id="2-1-1-Input"><a href="#2-1-1-Input" class="headerlink" title="2.1.1  Input"></a>2.1.1  Input</h3><p>nput(shape=None,batch_shape=None,name=None,dtype=K.floatx(),sparse=False,tensor=None)</p>
+<ol>
+<li>shape: 形状元组（整型）</li>
+<li>batch_shape: 形状元组（整型）</li>
+<li>name: 对于该层是可选的名字字符串</li>
+<li>dtype: 预期的输入数据类型</li>
+<li>sparse: 特定的布尔值，占位符是否为sparse</li>
+<li>tensor: 可选的存在的向量包装到Input层，如果设置了，该层将不会创建一个占位张量。</li>
+</ol>
+<p>返回值：一个张量</p>
+<h3 id="2-1-2-Dense"><a href="#2-1-2-Dense" class="headerlink" title="2.1.2  Dense"></a>2.1.2  Dense</h3><p>keras.layers.core.Dense(output_dim, init=’glorot_uniform’, activation=’linear’, weights=None, W_regularizer=None, b_regularizer=None, activity_regularizer=None, W_constraint=None, b_constraint=None, bias=True, input_dim=None)</p>
+<p>Dense层就是全链接层</p>
+<ol>
+<li>output_dim：大于0的整数，代表该层的输出维度。模型中非首层的全连接层其输入维度可以自动推断，因此非首层的全连接定义时不需要指定输入维度。</li>
+<li>init：初始化方法，为预定义初始化方法名的字符串，或用于初始化权重的Theano函数。该参数仅在不传递weights参数时才有意义。</li>
+<li>activation：激活函数，</li>
+<li>weights：权值，为numpy array的list。该list应含有一个形如（input_dim,output_dim）的权重矩阵和一个形如(output_dim,)的偏置向量</li>
+<li>W_regularizer：施加在权重上的正则项，为WeightRegularizer对象</li>
+<li>b_regularizer：施加在偏置向量上的正则项，为WeightRegularizer对象</li>
+<li>activity_regularizer：施加在输出上的正则项，为ActivityRegularizer对象</li>
+<li>W_constraints：施加在权重上的约束项，为Constraints对象</li>
+<li>b_constraints：施加在偏置上的约束项，为Constraints对象</li>
+<li>bias：布尔值，是否包含偏置向量（即层对输入做线性变换还是仿射变换）</li>
+<li>input_dim：整数，输入数据的维度。当Dense层作为网络的第一层时，必须指定该参数或input_shape参数。</li>
+</ol>
+<h3 id="2-1-3-Model"><a href="#2-1-3-Model" class="headerlink" title="2.1.3  Model"></a>2.1.3  Model</h3><p>函数式模型</p>
+<p><strong>常用Model属性</strong></p>
+<ol>
+<li>model.layers：组成模型图的各个层</li>
+<li>model.inputs：模型的输入张量列表</li>
+<li>model.outputs：模型的输出张量列表</li>
+</ol>
+<h3 id="2-1-4-Model模型方法"><a href="#2-1-4-Model模型方法" class="headerlink" title="2.1.4  Model模型方法"></a>2.1.4  Model模型方法</h3><p><strong>compile</strong></p>
+<p>compile(self, optimizer, loss, metrics=None, loss_weights=None, sample_weight_mode=None, weighted_metrics=None, target_tensors=None)</p>
+<ol>
+<li>loss=’目标函数’</li>
+<li>optimizer：优化器</li>
+<li>metrics=[‘accuracy’])metrics: 列表，包含评估模型在训练和测试时的性能的指标</li>
+</ol>
+<p>其他，我这个菜鸡用的的比较少，这里不一一列举</p>
+<p><strong>fit</strong></p>
+<p>fit(self, x=None, y=None, batch_size=None, epochs=1, verbose=1, callbacks=None, validation_split=0.0, validation_data=None, shuffle=True, class_weight=None, sample_weight=None, initial_epoch=0, steps_per_epoch=None, validation_steps=None)</p>
+<p>model.fit（）向模型中输入训练集，验证集，迭代次数</p>
+<p>fit()用于使用给定输入训练模型.</p>
+<p><strong>evaluate</strong></p>
+<p>evaluate(self, x, y, batch_size=32, verbose=1, sample_weight=None)</p>
+<p>model.evaluate():就像他的名字一样，主要对模型进行评估</p>
+<p>Keras中model.evaluate（）返回的是 损失值和你选定的指标值（例如，精度accuracy）</p>
+<p><strong>predict</strong></p>
+<p>predict(self, x, batch_size=32, verbose=0)</p>
+<p>predict()用于实际预测.它为输入样本生成输出预测.</p>
+<p><strong>Embedding</strong></p>
+<p>Embedding(input_dim, output_dim, embeddings_initializer=’uniform’, embeddings_regularizer=None, activity_regularizer=None, embeddings_constraint=None, mask_zero=False, input_length=None)</p>
+<p>嵌入层将正整数（下标）转换为具有固定大小的向量，如[[4],[20]]-&gt;[[0.25,0.1],[0.6,-0.2]]</p>
+<p>Embedding层只能作为模型的第一层</p>
+<ol>
+<li>input_dim：大或等于0的整数，字典长度，即输入数据最大下标+1</li>
+<li>output_dim：大于0的整数，代表全连接嵌入的维度</li>
+<li>embeddings_initializer: 嵌入矩阵的初始化方法，为预定义初始化方法名的字符串，或用于初始化权重的初始化器。参考initializers</li>
+<li>embeddings_regularizer: 嵌入矩阵的正则项，为Regularizer对象</li>
+<li>embeddings_constraint: 嵌入矩阵的约束项，为Constraints对象</li>
+<li>mask_zero：布尔值，确定是否将输入中的‘0’看作是应该被忽略的‘填充’（padding）值，该参数在使用递归层处理变长输入时有用。设置为True的话，模型中后续的层必须都支持masking，否则会抛出异常。如果该值为True，则下标0在字典中不可用，input_dim应设置为|vocabulary| + 1。</li>
+<li>input_length：当输入序列的长度固定时，该值为其长度。如果要在该层后接Flatten层，然后接Dense层，则必须指定该参数，否则Dense层的输出维度无法自动推断。</li>
+</ol>
+<h1 id="3-Keras-实现手写数字识别🤪"><a href="#3-Keras-实现手写数字识别🤪" class="headerlink" title="3  Keras 实现手写数字识别🤪"></a>3  Keras 实现手写数字识别🤪</h1><p>下载数据.外网，要翻墙，下载速度快赶上蜗牛了</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> keras</span><br><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> mnist</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt </span><br><span class="line">%matplotlib inline</span><br><span class="line">(train_images,train_labels),(test_images,test_labels) = mnist.load_data()</span><br></pre></td></tr></table></figure>
+
+<p>查看一下数据集大小</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">"shape og train images is "</span>,train_images.shape)</span><br><span class="line">print(<span class="string">"shape of train label is "</span>,train_labels.shape)</span><br><span class="line">print(<span class="string">"train labels is "</span>,train_labels)</span><br><span class="line">print(<span class="string">'shape of test images is '</span>,test_labels.shape)</span><br><span class="line">print(<span class="string">'shape of test labels is '</span>,test_labels.shape)</span><br><span class="line">print(<span class="string">"test labels is "</span>,test_labels)</span><br></pre></td></tr></table></figure>
+
+<img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/08/20/mJK3Dg.png"  alt="" border="0" />
+
+<p>想不想看看手写数字长啥样？？几行代码轻松搞定。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.imshow(train_images[<span class="number">0</span>])</span><br><span class="line">plt.colorbar()</span><br><span class="line">plt.grid(<span class="literal">False</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/08/20/mJK7ad.png"  alt="" border="0" />
+
+<p>为什么会有颜色呢？让我们变为灰度图片再看看</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">train_images= train_images / <span class="number">255.0</span></span><br><span class="line">test_images= test_images / <span class="number">255.0</span></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">10</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">25</span>):</span><br><span class="line">    plt.subplot(<span class="number">5</span>,<span class="number">5</span>,i+<span class="number">1</span>)</span><br><span class="line">    plt.xticks([])</span><br><span class="line">    plt.yticks([])</span><br><span class="line">    plt.grid(<span class="literal">False</span>)</span><br><span class="line">    plt.imshow(train_images[i], cmap=plt.cm.binary)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/08/20/mJMUdH.png"  alt="" border="0" />
+
+<p>好了数据大小也有了，手写数字也看了，接下来就让我们建立神经网络模型了。</p>
+<p><strong>建立模型</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">softmax</span><span class="params">(x, axis=<span class="number">-1</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Softmax of a tensor.</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">    # Arguments</span></span><br><span class="line"><span class="string">        x: A tensor or variable.</span></span><br><span class="line"><span class="string">        axis: The dimension softmax would be performed on.</span></span><br><span class="line"><span class="string">            The default is -1 which indicates the last dimension.</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">    # Returns</span></span><br><span class="line"><span class="string">        A tensor.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">return</span> tf.nn.softmax(x, dim=axis)</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设计网络</span></span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> models</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">network = models.Sequential()</span><br><span class="line">network.add(Dense(<span class="number">512</span>,activation = <span class="string">"relu"</span>,input_shape=(<span class="number">28</span>*<span class="number">28</span>,)))</span><br><span class="line">network.add(Dense(<span class="number">10</span>,activation = softmax))</span><br></pre></td></tr></table></figure>
+
+<p><strong>训练模型</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#编译网络</span></span><br><span class="line">network.compile( </span><br><span class="line">    optimizer = <span class="string">'rmsprop'</span>,loss=<span class="string">'categorical_crossentropy'</span>,metrics = [<span class="string">'accuracy'</span>])</span><br><span class="line"><span class="comment">#数据处理</span></span><br><span class="line">train_images = train_images.reshape((<span class="number">60000</span>,<span class="number">28</span>*<span class="number">28</span>))</span><br><span class="line">train_images = train_images.astype(<span class="string">'float32'</span>)/<span class="number">255</span></span><br><span class="line"></span><br><span class="line">test_images = test_images.reshape((<span class="number">10000</span>,<span class="number">28</span>*<span class="number">28</span>))</span><br><span class="line">test_images = test_images.astype(<span class="string">'float32'</span>)/<span class="number">255</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#处理标签</span></span><br><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> to_categorical</span><br><span class="line">train_labels = to_categorical(train_labels)</span><br><span class="line">test_labels = to_categorical(test_labels)</span><br><span class="line"><span class="comment">#训练模型</span></span><br><span class="line">network.fit(train_images,train_labels,epochs = <span class="number">5</span>,batch_size = <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/08/20/mJQ074.png"  alt="" border="0" />
+
+<p><strong>测试模型</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">test_loss,test_acc = network.evaluate(test_images,test_labels)</span><br><span class="line">print(<span class="string">f'test_loss : <span class="subst">&#123;test_loss&#125;</span>'</span>)</span><br><span class="line">print(<span class="string">f'test_acc :<span class="subst">&#123;test_acc&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/AngelNI.github.io/" class="lazyload" data-src="https://s2.ax1x.com/2019/08/20/mJQ2jK.png"  alt="" border="0" />
+
+<h1 id="4-总结💪"><a href="#4-总结💪" class="headerlink" title="4.总结💪"></a>4.总结💪</h1><p>以上就简单的实现了用keras实现手写数据的识别，代码简短，但老记不住，忘记该用啥，该怎么拼写😅😅😅，理论基础还是要背牢的，还要多多使用啊，熟能生巧</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Hui Ning</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://angelni.github.io/Keras-note-2/">https://angelni.github.io/Keras-note-2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/AngelNI.github.io/tags/Keras-note/">Keras-note</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/AngelNI/CDN@5.0/gallary/163.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/imgs/2.png" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/imgs/1.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/AngelNI.github.io/Stanford-Machine-Learning-camp/"><img class="prev_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/gallary/24.webp" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/imgs/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Stanford-Machine-Learning-camp</div></div></a></div><div class="next-post pull_right"><a href="/AngelNI.github.io/Keras-note-1/"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/gallary/79.webp" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/imgs/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Keras-learn-note(1)</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/AngelNI.github.io/Keras-note-3/" title="Keras-learn-note(3)"><img class="relatedPosts_cover lazyload"data-src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/gallary/77.webp"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-08-21</div><div class="relatedPosts_title">Keras-learn-note(3)</div></div></a></div><div class="relatedPosts_item"><a href="/AngelNI.github.io/Keras-note-1/" title="Keras-learn-note(1)"><img class="relatedPosts_cover lazyload"data-src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/gallary/79.webp"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-08-19</div><div class="relatedPosts_title">Keras-learn-note(1)</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: false,
+  verify: false,
+  appId: 'qPPoge1POJnI2euYtRklvNeY-MdYXbMMI',
+  appKey: 'HQ7Jf7U5GYLwyKBwjoLHguWx',
+  placeholder: '一起来玩耍鸭！',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'en',
+  recordIP: false,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/gallary/78.webp)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By Hui Ning</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://angelni.github.io/">blog</a>!</div><div class="icp"><a href="http://www.beian.miit.gov.cn" target="_blank" rel="noopener"><img class="icp-icon" src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/imgs/icp.png"/><span>冀ICP备19030318号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">简</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js" ></script><script src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/js/utils.js" ></script><script src="https://cdn.jsdelivr.net/gh/AngelNI/CDN@3.0/js/main.js" ></script><script src="/AngelNI.github.io/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/AngelNI.github.io/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="ribbon_piao" mobile="false" src="/AngelNI.github.io/js/third-party/piao.js"></script><script src="/AngelNI.github.io/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/AngelNI.github.io/js/search/local-search.js"></script></body></html>
