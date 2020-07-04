@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>实现调用API接口</title>
+      <link href="/AngelNI.github.io/API/"/>
+      <url>/AngelNI.github.io/API/</url>
+      
+        <content type="html"><![CDATA[<div class="note info">            <p>阿里云大学，学习认证——Apsara Clouder专项技能认证：实现调用API接口</p>          </div><h1 id="课时一"><a href="#课时一" class="headerlink" title="课时一"></a>课时一</h1><h2 id="API概念"><a href="#API概念" class="headerlink" title="API概念"></a>API概念</h2><p><strong>API（Application Programming Interface，应用程序编程接口）</strong>是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源代码或理解内部工作机制的细节。</p><h2 id="API特点"><a href="#API特点" class="headerlink" title="API特点"></a>API特点</h2><ul><li>API是一个明确定义的接口，可以为其他软件提供特定服务</li><li>API可以小到只包含一个单独的函数，也可以大到包含数以百计的类方法，全局函数，数据类型，枚举类型和常量等。</li><li>API的实现可以是私有的，也可以是开源的</li></ul><h2 id="API的分类"><a href="#API的分类" class="headerlink" title="API的分类"></a>API的分类</h2><ol><li>面向对象语言的API<ul><li>举例：Java API列表</li></ul></li><li>库与框架的API<ul><li>Windows API、Windows DirectX</li></ul></li><li>API与协议<ul><li>举例：LDAP应用程序接口</li></ul></li><li>API与接口设备<ul><li>PC BIOS调用接口、ASPI for SCSI设备接口</li></ul></li><li>Web API<ul><li>举例：Google地图API、新浪微博API、阿里云API市场</li></ul></li></ol><h2 id="为什么使用API"><a href="#为什么使用API" class="headerlink" title="为什么使用API"></a>为什么使用API</h2><ol><li>快速扩展功能</li><li>避免“造轮子”，提供开发效率</li><li>降低模块之间的耦合度</li></ol><h1 id="课时二"><a href="#课时二" class="headerlink" title="课时二"></a>课时二</h1><h2 id="Web-API协议及-HTTP请求"><a href="#Web-API协议及-HTTP请求" class="headerlink" title="Web API协议及 HTTP请求"></a>Web API协议及 HTTP请求</h2><p>Web API一般采用HTTP作为底层协议，HTTP请求机制如下：</p><ol><li>客户端向服务器请求发送一个请求</li><li>服务器给客户端一个响应，告诉客户端是否可以完成它请求的工作</li></ol><p><img src="/AngelNI.github.io/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/AngelNI/Figure/img/TIM%E6%88%AA%E5%9B%BE20200704155058.webp"  alt=""></p><p><strong>HTTP请求包含的内容</strong></p><p>为了构造有效的请求，客户端需要包含四个部分：</p><ul><li>URL</li><li>请求方式</li><li>Header</li><li>Body</li></ul><h2 id="API请求方式"><a href="#API请求方式" class="headerlink" title="API请求方式"></a>API请求方式</h2><p>请求方式发哦苏服务器客户端希望他采取什么动作。常见的请求方式有四种：</p><ul><li>GET：请求服务器获取一个资源</li><li>POST：请求服务器创建一个新的资源</li><li>PUT：请求服务器编辑或更新一个已存在的资源</li><li>DELETE: 请求服务器删除一个资源</li></ul><h4 id="请求头与请求主体"><a href="#请求头与请求主体" class="headerlink" title="请求头与请求主体"></a>请求头与请求主体</h4><p><strong>请求头（Headers）</strong>：提供了请求的元信息，是一个简单的项目列表，其中客户端发送请求的时间，和请求主体大小、身份认证等信息。</p><p><strong>请求体（Body）</strong>：包含了客户端希望发送给服务器的数据。</p><h2 id="状态返回码"><a href="#状态返回码" class="headerlink" title="状态返回码"></a>状态返回码</h2><p>当成功调用API后，除了返回数据外，还会包含一个状态码，处理成功返回2xx：</p><p><img src="/AngelNI.github.io/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/AngelNI/Figure/img/TIM%E6%88%AA%E5%9B%BE20200704160327.webp"  alt=""></p><p>API未调用成功，则返回错误代码。服务端错误代码是5xx，表示服务不可用（此时建议重试或联系商品页面的API服务商）</p><p><img src="/AngelNI.github.io/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/AngelNI/Figure/img/TIM%E6%88%AA%E5%9B%BE20200704160353.webp"  alt=""></p><p>客户端错误代码为4xx，表示业务报错。此时一般为参数错误、签名错误、请求方式有误或被流控限制等业务类错误。建议详细查看错误码，针对性解决问题。</p><p>参考：错误代码表<a href="https://help.aliyun.com/document_detail/43906.html" target="_blank" rel="noopener">https://help.aliyun.com/document_detail/43906.html</a></p><h2 id="API数据格式"><a href="#API数据格式" class="headerlink" title="API数据格式"></a>API数据格式</h2><p><strong>返回数据格式</strong></p><p>目前最新的API大多数使用JSON数据格式。JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，采用完全独立于语言的文本格式，易于人阅读和编写，同时也易于机器解析和生成，是一种理想的数据交换语言。</p><p><img src="/AngelNI.github.io/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/AngelNI/Figure/img/TIM%E6%88%AA%E5%9B%BE20200704161138.webp"  alt=""></p><p><strong>JSON数据格式表示方法</strong></p><ol><li><p>表示对象</p><p> JSON最常用的格式是对象的键值对</p></li><li><p>表示数组</p><p> 和普通的JS数组一样，JSON表示数据的方式是使用方括号[]</p></li></ol><h2 id="API身份证及签名认证"><a href="#API身份证及签名认证" class="headerlink" title="API身份证及签名认证"></a>API身份证及签名认证</h2><p><strong>API简单身份认证（APPCODE）</strong></p><p>可以通过APPCODE的方式，实现到被调用接口的身份认证，获取访问相关API的调用权限。</p><p>使用方法：</p><ul><li>请求Header中添加的Authorization子段；</li><li>配置Authorization字段的值为“APPCODE + 半角空格 + APPCODE值”。</li></ul><p>格式：</p><ul><li>Authorization：APPCODE AppCode值</li></ul><p>示例：</p><ul><li>Authorization: APPCODE 3F2504E04F8911D39A0C0305E82C3301</li></ul><p><strong>API签名认证</strong></p><p>AppKey和AppSecret相当于当前账户的另一套账号和密码机制。在云市场购买API后，就可以在控制台找到对应的AppKey和AppSecret。</p><p>具体的签名认证方法请参见<strong>请求头部字段</strong>和<strong>请求签名说明文档</strong></p><h1 id="课时三"><a href="#课时三" class="headerlink" title="课时三"></a>课时三</h1><h2 id="API调试"><a href="#API调试" class="headerlink" title="API调试"></a>API调试</h2><h2 id="API调动步骤"><a href="#API调动步骤" class="headerlink" title="API调动步骤"></a>API调动步骤</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">A(获取API文档) --&gt;B(创建应用) --&gt;C(获取授权) --&gt;D(调用API)</span><br></pre></td></tr></table></figure><p>要调用API需要三个基础条件：</p><ul><li>API：您即将要调用的API，明确API参数定义。</li><li>应用app：作为您调用API时的身份，有AppKey和AppSecret用于验证您的身份。</li><li>API和App的权限关系：App想调用某个API需要具有API的权限，这个权限通过授权的功能来建立。</li></ul><h2 id="API调用注意事项"><a href="#API调用注意事项" class="headerlink" title="API调用注意事项"></a>API调用注意事项</h2><p>API调用的注意事项</p><ul><li>每个账号下APP个数上限为10个，APP名称应为账号下唯一。</li><li>调用API的流控限制为，耽搁IP，QPS不超过100。</li><li>你有权操作购买的API与APP的授权和解除授权。由于服务提供方授权给你的APP的API，你无权操作解除授权。</li><li>你的请求需要包含签名信息，请参考文档请求签名说明文档。</li></ul><h1 id="课时四——实战"><a href="#课时四——实战" class="headerlink" title="课时四——实战"></a>课时四——实战</h1><h2 id="股票行情查询API说明"><a href="#股票行情查询API说明" class="headerlink" title="股票行情查询API说明"></a>股票行情查询API说明</h2><p>API查询数据包括行情，指标。分数线，K线，历史行情等，可批量查询沪深股市，香港股市。</p><h2 id="开通股票行情查询API"><a href="#开通股票行情查询API" class="headerlink" title="开通股票行情查询API"></a>开通股票行情查询API</h2><p>在阿里云云市场API购买股票行情查询API，并查看代码请求方法及返回数据。查看自己的APPCODE或者AppKey和AppSecret。</p><p>其他，根据视频内容操作。</p><h2 id="查看API文档"><a href="#查看API文档" class="headerlink" title="查看API文档"></a>查看API文档</h2><p>如有返回错误及更多需求，请查看API文档。</p><h2 id="调用股票行情查询API"><a href="#调用股票行情查询API" class="headerlink" title="调用股票行情查询API"></a>调用股票行情查询API</h2><h1 id="最后，考试成功"><a href="#最后，考试成功" class="headerlink" title="最后，考试成功"></a>最后，考试成功</h1><p><img src="/AngelNI.github.io/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/AngelNI/Figure/img/img_50701cb979d93551370b164f2d2d0789.webp"  alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深度学习笔记</title>
+      <link href="/AngelNI.github.io/notebook/"/>
+      <url>/AngelNI.github.io/notebook/</url>
+      
+        <content type="html"><![CDATA[<div class="note default">            <p>2020年7月3日晚，第一次更新，未来几天，将会持续更新。</p>          </div><h1 id="历史概述"><a href="#历史概述" class="headerlink" title="历史概述"></a>历史概述</h1><p>20世纪40年代到60年代，深度学习的的出行出现在<strong>控制论（cybernetics）</strong>。</p><p>20世纪50年代，<strong>感知机（Rosenblatt）</strong>出现，成为第一个能够根据每个类别的输入样本来学习权重的模型，约同一时期，<strong>自适应线性单元（ADALINE）</strong>简单的返回函数f(x)本身的值来预测一个实数，并且他还可以从数据预测这些数。用于调节ADALINE权重的训练算法是别成为<strong>随机梯度下降</strong>的一种特例。</p><p>20世纪80年代，<strong>联结主义（connectionism）</strong>或<strong>并行分布处理（parallel distributed prosessing）</strong>潮流的出现，引起神经网络研究的第二次浪潮。联结主义实在认知科学的背景下提出。认知科学是理解思维的跨科学途径，即他融合多个不同的分析层次。联结主义开始研究真正基于神经系统实现的认知模型（Touretzky and Mintion）。联结主义的中心思想是，当网络将大量简单的计算单元连接在一起时就可以实现智能行为。</p><p>20世纪90年代，有人提出对长序列进行建模的一些根本性数学难题，引入<strong>长短期记忆（LSTM）</strong>网络来解决这些难题。</p><p>2006年，引发神经网络研究的第三次浪潮，神经网络可以使用一种称为贪婪逐层预训练的策略来有效地训练。</p><h1 id="第一部分-应用数学与机器学习基础"><a href="#第一部分-应用数学与机器学习基础" class="headerlink" title="第一部分        应用数学与机器学习基础"></a>第一部分        应用数学与机器学习基础</h1><h2 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h2><p>由于线性代数属于大学必修专业基础课程，基本的概念定义在这里不一一赘述。</p><h3 id="标量、向量、矩阵和张量"><a href="#标量、向量、矩阵和张量" class="headerlink" title="标量、向量、矩阵和张量"></a>标量、向量、矩阵和张量</h3><h3 id="矩阵的基本运算，转置，广播，点积"><a href="#矩阵的基本运算，转置，广播，点积" class="headerlink" title="矩阵的基本运算，转置，广播，点积"></a>矩阵的基本运算，转置，广播，点积</h3><h3 id="单位矩阵和逆矩阵"><a href="#单位矩阵和逆矩阵" class="headerlink" title="单位矩阵和逆矩阵"></a>单位矩阵和逆矩阵</h3><h3 id="线性相关和生成子空间"><a href="#线性相关和生成子空间" class="headerlink" title="线性相关和生成子空间"></a>线性相关和生成子空间</h3><h3 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h3><p>在机器学习中，我们经常使用被称为<strong>范数（norn）</strong>的函数衡量向量的大小。<br>$$<br>L^{p}范数定义如下： |\boldsymbol{x}|<em>{p}=\left(\sum</em>{i}\left|x_{i}\right|^{p}\right)^{\frac{1}{p}}<br>$$<br>范数是将向量映射到非负值得函数。直观上讲，向量x的范数衡量从原点到点x的距离。</p><p>常见的范数有L1、L2范数，</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> DeepLearn </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DeepLearn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python脚本 Doc 转 PDF</title>
+      <link href="/AngelNI.github.io/doc-to-pdf/"/>
+      <url>/AngelNI.github.io/doc-to-pdf/</url>
+      
+        <content type="html"><![CDATA[<p>有时候，python脚本就是香啊，省了下载安装软件的麻烦事，提高了工作效率。</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">########################</span></span><br><span class="line"><span class="comment">#       word 转 pdf</span></span><br><span class="line"><span class="comment">########################</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> win32com <span class="keyword">import</span> client</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> win32com.client <span class="keyword">import</span> gencache</span><br><span class="line"><span class="keyword">from</span> win32com.client <span class="keyword">import</span> constants, gencache</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">createPdf</span><span class="params">(wordPath, pdfPath)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    word转pdf</span></span><br><span class="line"><span class="string">    :param wordPath: word文件路径</span></span><br><span class="line"><span class="string">    :param pdfPath:  生成pdf文件路径</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    word = gencache.EnsureDispatch(<span class="string">'Word.Application'</span>)</span><br><span class="line">    doc = word.Documents.Open(wordPath, ReadOnly=<span class="number">1</span>)</span><br><span class="line">    doc.ExportAsFixedFormat(pdfPath,</span><br><span class="line">                            constants.wdExportFormatPDF,</span><br><span class="line">                            Item=constants.wdExportDocumentWithMarkup,</span><br><span class="line">                            CreateBookmarks=constants.wdExportCreateHeadingBookmarks)</span><br><span class="line">    word.Quit(constants.wdDoNotSaveChanges)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    doc_name = <span class="string">"C:\\Users\\14768\\Desktop\\1.docx"</span></span><br><span class="line">    fpt_name = <span class="string">"C:\\Users\\14768\\Desktop\\1.pdf"</span></span><br><span class="line">    createPdf(doc_name,fpt_name)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python自制录屏小工具</title>
       <link href="/AngelNI.github.io/ScreenRecord/"/>
       <url>/AngelNI.github.io/ScreenRecord/</url>

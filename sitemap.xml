@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angelni.github.io/API/</loc>
+    
+    <lastmod>2020-07-04T10:50:01.361Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/notebook/</loc>
+    
+    <lastmod>2020-07-03T15:08:31.855Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/doc-to-pdf/</loc>
+    
+    <lastmod>2020-07-03T12:39:49.686Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angelni.github.io/about/index.html</loc>
     
     <lastmod>2020-06-21T00:58:16.911Z</lastmod>
