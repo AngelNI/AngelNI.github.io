@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://angelni.github.io/softmax/</loc>
+    
+    <lastmod>2020-07-16T11:04:09.466Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://angelni.github.io/cross-entropy/</loc>
+    
+    <lastmod>2020-07-16T10:56:26.861Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://angelni.github.io/Word2Vec/</loc>
     
-    <lastmod>2020-07-16T10:04:28.568Z</lastmod>
+    <lastmod>2020-07-16T10:56:26.858Z</lastmod>
     
   </url>
   
@@ -12,20 +26,6 @@
     <loc>https://angelni.github.io/SVD/</loc>
     
     <lastmod>2020-07-16T09:09:02.752Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/softmax/</loc>
-    
-    <lastmod>2020-07-16T09:06:43.022Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://angelni.github.io/cross-entropy/</loc>
-    
-    <lastmod>2020-07-16T08:48:06.888Z</lastmod>
     
   </url>
   
